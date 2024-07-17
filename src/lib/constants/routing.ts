@@ -1,6 +1,6 @@
 export const routes = {
-	signup: "/signup",
-	signin: "/",
-	forgotPassword: "/forgot-password",
-	home: "/",
+  signup: "/signup",
+  signin: "/",
+  forgotPassword: "/forgot-password",
+  home: "/",
 };
