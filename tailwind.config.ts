@@ -33,6 +33,8 @@ const config = {
           blue: "#3C3490",
           black: "#2B2B2B",
           lightBlack: "#1D1D1F",
+          grey: "#AFAB9F",
+          teamTitle: "#0E150E",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

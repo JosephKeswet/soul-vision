@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add this to your global CSS file or a Tailwind CSS configuration file */
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
