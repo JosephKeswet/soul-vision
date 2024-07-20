@@ -1,5 +1,6 @@
 import React from "react";
 import TeamCard from "./_components/TeamCard";
+import { members } from "@/lib/constants";
 
 type Props = {};
 
@@ -32,22 +33,22 @@ export default function page({}: Props) {
         <TeamCard
           name="JESIMIEL BELLO"
           role="PRINCIPAL ARTIST + Co-Founder"
-          image="/assets/TeamMember1.png"
+          image={members.member1}
         />
         <TeamCard
           name="DAFE EDESIRI"
           role="AUDIO PRODUCER + Co-Founder"
-          image="/assets/TeamMember1.png"
+          image={members.member2}
         />
         <TeamCard
           name="DOYIN AMU"
           role="BUSINESS DEVELOPMENT LEAD"
-          image="/assets/TeamMember1.png"
+          image={members.member3}
         />
         <TeamCard
           name="PRAISE AMEH"
           role="CREATIVE DIRECTOR - BRAND & DIGITAL EXPERIENCE"
-          image="/assets/TeamMember1.png"
+          image={members.member4}
         />
       </div>
     </div>

@@ -85,8 +85,8 @@ export default function Home() {
           </div>
         )}
       </div>
-      <section className="px-4 lg:px-10">
-        <div className="pt-8 lg:pt-24">
+      <section>
+        <div className="pt-8 lg:pt-24 px-4 lg:px-10">
           <h1
             className={`text-primary-blue text-[60px] font-light font-IBM leading-[68px]`}
           >
@@ -97,14 +97,14 @@ export default function Home() {
             live action.
           </p>
         </div>
-        <div className="py-8 lg:py-24">
+        <div className="py-8 lg:py-24 px-4 lg:px-10">
           <img
             src="/assets/ArrowDown.svg"
             className="w-[43px] h-[34px] cursor-pointer"
             alt="Arrow Down"
           />
         </div>
-        <div className="w-full py-8 lg:py-24">
+        <div className="w-full py-8 lg:py-24 pl-4 lg:pl-10">
           <Carousel
             opts={{ align: "start" }}
             orientation="horizontal"
@@ -112,7 +112,7 @@ export default function Home() {
           >
             <CarouselContent className="flex gap-6">
               <CarouselItem className="w-[781px] basis-7/12">
-                <VideoCard title="Pathos" video={videos.haskeMontage} />
+                <VideoCard title="Amina" video={videos.aminaMontage} />
               </CarouselItem>
               <CarouselItem className="w-[781px] basis-7/12">
                 <VideoCard
@@ -121,7 +121,7 @@ export default function Home() {
                 />
               </CarouselItem>
               <CarouselItem className="w-[781px] basis-7/12">
-                <VideoCard title="Another Video" video={videos.haskeMontage} />
+                <VideoCard title="Pathos" video="" image="/assets/Pathos.png" />
               </CarouselItem>
             </CarouselContent>
             <CarouselPrevious className="absolute z-30 top-[100%] bottom-0 left-[40%] right-8" />
@@ -129,7 +129,7 @@ export default function Home() {
             <CarouselNext className="absolute z-30 top-[100%] bottom-0 right-[40%]" />
           </Carousel>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-12 lg:gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-12 lg:gap-0 px-4 lg:px-10">
           <div className="col-span-1">
             <h1 className="text-[62px] text-black font-normal font-IBM">
               Our Story
@@ -162,7 +162,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex justify-end py-8 lg:py-24">
+        <div className="flex justify-end py-8 lg:py-24 px-4 lg:px-10">
           <ArrowRightIcon />
         </div>
       </section>
