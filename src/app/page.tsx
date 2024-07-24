@@ -75,7 +75,7 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
 
-        {!isPlaying && (
+        {/* {!isPlaying && (
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <img
               onClick={handlePlay}
@@ -84,7 +84,7 @@ export default function Home() {
               alt="Play"
             />
           </div>
-        )}
+        )} */}
       </div>
       <section>
         <div className="pt-8 lg:pt-24 px-4 lg:px-10">
@@ -130,21 +130,21 @@ export default function Home() {
             <CarouselNext className="absolute z-30 top-[100%] bottom-0 right-[40%] my-10" />
           </Carousel>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 lg:gap-0 px-4 lg:px-10">
+        <div id="story" className="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 lg:gap-0 px-4 lg:px-10">
           <div className="col-span-1">
             <h1 className="text-[32px] lg:text-[62px] text-black font-normal font-IBM">
               Our Story
             </h1>
           </div>
           <div className="col-span-1 flex flex-col gap-8">
-            <p className="text-sm lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
               Soul Vision Studio is an animation film company dedicated to
               preserving the essence of art and cinema. We aim to bridge the gap
               between live-action and computer-generated imagery while
               developing new technologies to enhance storytelling, creating a
               truly immersive cinematic experience.
             </p>
-            <p className="text-sm lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
               Founded in 2022, our studio has been focused on establishing an
               effective production pipeline that enables us to develop our
               intellectual properties and achieve our goals. Since our
@@ -152,7 +152,7 @@ export default function Home() {
               garnered significant attention organically, proving the viability
               of our endeavour.
             </p>
-            <p className="text-sm lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
               Our mission is to restore the spark that cinema once had and
               illuminate a new way of storytelling. At its core, Soul Vision
               Studio possesses its own consciousness. We believe that every

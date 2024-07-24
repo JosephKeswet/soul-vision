@@ -8,11 +8,11 @@ export default function page({}: Props) {
   return (
     <div className="px-4 lg:px-10">
       <div className="flex flex-col gap-16 pt-10">
-        <h1 className="text-primary-black text-[76.56px] font-light font-IBM leading-[80px] -tracking-[4.8px]">
+        <h1 className="text-primary-black text-[32px] lg:text-[76.56px] font-light font-IBM leading-[7px] lg:leading-[80px] lg:-tracking-[4.8px]">
           Leadership
         </h1>
         <div className="flex flex-col gap-4">
-          <p className="text-primary-foreground text-[17px] font-normal font-IBM leading-[24px] ">
+          <p className="text-primary-foreground text-[15px] lg:text-[17px] font-normal font-IBM leading-[24px] ">
             Dá Design Studio is a Brand Identity Design Studio helping Africans
             create real brands that work. Quintessential brands that aren&apos;t
             flawless or perfect, but honest and relatable. For us, Brand
@@ -21,7 +21,7 @@ export default function page({}: Props) {
             market. This is our mission. It&apos;s not really about us,
             it&apos;s about the brands we help people love
           </p>
-          <p className="text-primary-foreground text-[17px] font-normal font-IBM leading-[24px] ">
+          <p className="text-primary-foreground text-[15px] lg:text-[17px] font-normal font-IBM leading-[24px] ">
             Since our launch in April 2016, we have worked with some of the most
             progressive companies in Nigeria, exhibited internationally, and
             have had significant collaborations including with the world&apos;s

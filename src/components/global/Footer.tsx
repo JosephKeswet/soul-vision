@@ -87,10 +87,10 @@ export default function Footer({}: Props) {
             Location
           </p>
           <ul className="flex flex-col gap-3 text-sm md:text-[22.1px]">
-            <li className=" underline underline-offset-4">
+            <li className=" ">
               Palm Springs Luxury Estate
             </li>
-            <li className=" underline underline-offset-4">
+            <li className=" ">
               Maitama Extension, Abuja 930001
             </li>
             <li className=" underline underline-offset-4">Directions</li>

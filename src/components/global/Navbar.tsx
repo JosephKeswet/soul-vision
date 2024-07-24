@@ -1,14 +1,16 @@
 "use client";
 import { routes } from "@/lib/constants";
+import { scrollToSection } from "@/lib/utils";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   const pathname = usePathname();
+  const router = useRouter()
   return (
     <div className={`${pathname === routes.home ? "bg-black" : "bg-white"} `}>
       <div className="flex items-center justify-between w-full p-4 lg:p-10">
@@ -36,7 +38,11 @@ export default function Navbar({}: Props) {
             className={`w-fit h-[30px] px-4 cursor-pointer ${pathname === routes.story ? "underline underline-offset-4 text-primary-blue " : ""}`}
           >
             {" "}
-            <Link href="#">Our Story</Link>
+            <p onClick={() =>{
+              router.push(routes.home)
+               scrollToSection("story")
+              }}
+            >Our Story</p>
           </li>
           <li
             className={`w-fit h-[30px] px-4 cursor-pointer ${pathname === routes.team ? "underline underline-offset-4 text-primary-blue " : ""}`}

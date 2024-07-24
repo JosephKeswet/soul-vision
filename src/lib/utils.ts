@@ -25,3 +25,10 @@ export function formatDate(date: string) {
 
   return formattedDate; // Output: April 19, 2024
 }
+
+export const scrollToSection = (id: string) => {
+	const element = document.getElementById(id);
+	if (element) {
+		element.scrollIntoView({ behavior: "smooth" });
+	}
+};
