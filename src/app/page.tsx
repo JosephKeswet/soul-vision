@@ -67,6 +67,7 @@ export default function Home() {
           className="absolute inset-0 object-cover w-full h-full"
           playsInline
           controls={false}
+          autoPlay
           loop
           onLoadedMetadata={() => setIsLoading(false)}
         >
@@ -88,11 +89,11 @@ export default function Home() {
       <section>
         <div className="pt-8 lg:pt-24 px-4 lg:px-10">
           <h1
-            className={`text-primary-blue text-[60px] font-light font-IBM leading-[68px]`}
+            className={`text-primary-blue text-[22.1px] lg:text-[60px] font-light font-IBM leading-[35.33px] lg:leading-[68px]`}
           >
             Staying true to Art.
           </h1>
-          <p className="text-primary-black text-[60px] font-light font-IBM leading-[82.8px]">
+          <p className="text-primary-black text-[22.1px] lg:text-[60px] font-light font-IBM leading-[30.5px] lg:leading-[82.8px]">
             A future-focused animation studio bridging the gap between CGI and
             live action.
           </p>
@@ -104,46 +105,46 @@ export default function Home() {
             alt="Arrow Down"
           />
         </div>
-        <div className="w-full py-8 lg:py-24 pl-4 lg:pl-10">
+        <div className="w-full py-8 lg:py-24 px-4 lg:pl-10">
           <Carousel
             opts={{ align: "start" }}
             orientation="horizontal"
-            className="w-full h-[615px]"
+            className="w-full h-auto lg:h-[615px]"
           >
-            <CarouselContent className="flex gap-6">
-              <CarouselItem className="w-[781px] basis-7/12">
+            <CarouselContent className="flex flex-col lg:flex-row gap-6">
+              <CarouselItem className="w-full lg:w-[781px] basis-7/12">
                 <VideoCard title="Amina" video={videos.aminaMontage} />
               </CarouselItem>
-              <CarouselItem className="w-[781px] basis-7/12">
+              <CarouselItem className="w-full lg:w-[781px]  basis-7/12">
                 <VideoCard
                   title="Haske - Light In The Dark"
                   video={videos.haskeMontage}
                 />
               </CarouselItem>
-              <CarouselItem className="w-[781px] basis-7/12">
-                <VideoCard title="Pathos" video="" image="/assets/Pathos.png" />
+              <CarouselItem className="w-full lg:w-[781px]  basis-7/12">
+                <VideoCard title="Pathos (Coming This Summer)" video="" image="/assets/Pathos.png" />
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious className="absolute z-30 top-[100%] bottom-0 left-[40%] right-8" />
+            <CarouselPrevious className="absolute z-30 top-[100%] bottom-0 left-[40%] right-8 my-10" />
 
-            <CarouselNext className="absolute z-30 top-[100%] bottom-0 right-[40%]" />
+            <CarouselNext className="absolute z-30 top-[100%] bottom-0 right-[40%] my-10" />
           </Carousel>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-12 lg:gap-0 px-4 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 lg:gap-0 px-4 lg:px-10">
           <div className="col-span-1">
-            <h1 className="text-[62px] text-black font-normal font-IBM">
+            <h1 className="text-[32px] lg:text-[62px] text-black font-normal font-IBM">
               Our Story
             </h1>
           </div>
           <div className="col-span-1 flex flex-col gap-8">
-            <p className="text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-sm lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
               Soul Vision Studio is an animation film company dedicated to
               preserving the essence of art and cinema. We aim to bridge the gap
               between live-action and computer-generated imagery while
               developing new technologies to enhance storytelling, creating a
               truly immersive cinematic experience.
             </p>
-            <p className="text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-sm lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
               Founded in 2022, our studio has been focused on establishing an
               effective production pipeline that enables us to develop our
               intellectual properties and achieve our goals. Since our
@@ -151,7 +152,7 @@ export default function Home() {
               garnered significant attention organically, proving the viability
               of our endeavour.
             </p>
-            <p className="text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-sm lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
               Our mission is to restore the spark that cinema once had and
               illuminate a new way of storytelling. At its core, Soul Vision
               Studio possesses its own consciousness. We believe that every
