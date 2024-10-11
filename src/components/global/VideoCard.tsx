@@ -58,7 +58,7 @@ export function VideoCard({ title, video, image }: Props) {
             ref={videoRef}
             className="absolute top-0 left-0 w-full h-full object-cover"
             playsInline
-            controls={false}
+            controls={true}
             autoPlay
             loop
           >

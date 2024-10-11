@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-export default function ({}: Props) {
+export default function Loader({}: Props) {
   return (
     <div>
       <div className="absolute inset-0 flex items-center justify-center z-20 bg-black">
