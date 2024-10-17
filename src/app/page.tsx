@@ -127,7 +127,7 @@ export default function Home() {
             </CarouselContent>
             <CarouselPrevious className="hidden lg:flex absolute z-30 top-[100%] bottom-0 left-[40%] right-8 my-10" />
 
-            <CarouselNext className="hidden lg:flex absolute z-30 top-[100%] bottom-0 right-[40%] my-10" />
+            <CarouselNext className="hidden lg:flex lg:absolute z-30 top-[100%] bottom-0 right-[40%] my-10" />
           </Carousel>
         </div>
         <div id="story" className="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 lg:gap-0 px-4 lg:px-10">

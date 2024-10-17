@@ -30,10 +30,10 @@ export default function TeamCard({ name, role, image }: Props) {
         />
       )}
       <div className="pt-3">
-        <p className="text-[21.75px] text-primary-teamTitle font-normal font-IBM leading-[25px]">
+        <p className="text-[21.75px] text-primary-teamTitle font-normal font-IBM leading-[25px] uppercase">
           {name}
         </p>
-        <p className="text-[15.13px] text-primary-teamTitle font-normal font-IBM">
+        <p className="text-[15.13px] text-primary-teamTitle font-light font-IBM uppercase">
           {role}
         </p>
       </div>

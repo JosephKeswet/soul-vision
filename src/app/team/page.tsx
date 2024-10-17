@@ -12,20 +12,11 @@ export default function page({}: Props) {
           Leadership
         </h1>
         <div className="flex flex-col gap-4">
-          <p className="text-primary-foreground text-[15px] lg:text-[17px] font-normal font-IBM leading-[24px] ">
-            Dá Design Studio is a Brand Identity Design Studio helping Africans
-            create real brands that work. Quintessential brands that aren&apos;t
-            flawless or perfect, but honest and relatable. For us, Brand
-            Identity design is about genuinely connecting, it&apos;s about
-            helping brands reflect their true images in the hearts of their
-            market. This is our mission. It&apos;s not really about us,
-            it&apos;s about the brands we help people love
+          <p className="text-primary-foreground text-[15px] lg:text-[17px] font-light font-IBM leading-[24px] ">
+          Soul Vision Studio&apos;s leadership is defined by a powerful synergy of creativity and technical expertise. The team driving the studio&apos;s vision is dedicated to preserving the essence of art while pushing the boundaries of technology in cinema. They bring together a unique combination of skills, with expertise in animation, visual effects, sound design, and storytelling, which allows the studio to blend live-action with computer-generated imagery seamlessly.
           </p>
-          <p className="text-primary-foreground text-[15px] lg:text-[17px] font-normal font-IBM leading-[24px] ">
-            Since our launch in April 2016, we have worked with some of the most
-            progressive companies in Nigeria, exhibited internationally, and
-            have had significant collaborations including with the world&apos;s
-            largest independent design{" "}
+          <p className="text-primary-foreground text-[15px] lg:text-[17px] font-light font-IBM leading-[24px] ">
+          The leadership is committed to more than just technical mastery; they hold a deep belief that every piece of art has its own consciousness, and this conviction guides the studio&apos;s approach to storytelling. This philosophy ensures that their creations maintain a sense of integrity and soul, resulting in films that resonate emotionally with audiences. Their focus is not merely on producing content, but on creating immersive cinematic experiences that re-ignite the spirit of storytelling. Through years of experience in visual effects, sound design, branding and business, the leadership team has built a solid foundation for the studio&apos;s mission. 
           </p>
         </div>
       </div>
