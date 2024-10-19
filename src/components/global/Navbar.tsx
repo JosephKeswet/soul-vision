@@ -10,7 +10,7 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   const pathname = usePathname();
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className={`${pathname === routes.home ? "bg-black" : "bg-white"} `}>
       <div className="flex items-center justify-between w-full p-4 lg:p-10">
@@ -38,21 +38,24 @@ export default function Navbar({}: Props) {
             className={`w-fit h-[30px] px-4 cursor-pointer ${pathname === routes.story ? "underline underline-offset-4 text-primary-blue " : ""}`}
           >
             {" "}
-            <p onClick={() =>{
-              router.push(routes.home)
-               scrollToSection("story")
+            <p
+              onClick={() => {
+                router.push(routes.home);
+                scrollToSection("story");
               }}
-            >Our Story</p>
+            >
+              Our Story
+            </p>
           </li>
           <li
             className={`w-fit h-[30px] px-4 cursor-pointer ${pathname === routes.team ? "underline underline-offset-4 text-primary-blue " : ""}`}
           >
-            <Link href="/team">Team </Link>
+            <Link href={routes.team}>Team </Link>
           </li>
           <li
             className={`w-fit h-[30px] px-4 cursor-pointer ${pathname === routes.work ? "underline underline-offset-4 text-primary-blue " : ""}`}
           >
-            <Link href="#">Work </Link>
+            <Link href={routes.work}>Work </Link>
           </li>
         </ul>
         <div className="flex md:hidden">

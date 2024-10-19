@@ -13,10 +13,27 @@ export default function page({}: Props) {
         </h1>
         <div className="flex flex-col gap-4">
           <p className="text-primary-foreground text-[15px] lg:text-[17px] font-light font-IBM leading-[24px] ">
-          Soul Vision Studio&apos;s leadership is defined by a powerful synergy of creativity and technical expertise. The team driving the studio&apos;s vision is dedicated to preserving the essence of art while pushing the boundaries of technology in cinema. They bring together a unique combination of skills, with expertise in animation, visual effects, sound design, and storytelling, which allows the studio to blend live-action with computer-generated imagery seamlessly.
+            Soul Vision Studio&apos;s leadership is defined by a powerful
+            synergy of creativity and technical expertise. The team driving the
+            studio&apos;s vision is dedicated to preserving the essence of art
+            while pushing the boundaries of technology in cinema. They bring
+            together a unique combination of skills, with expertise in
+            animation, visual effects, sound design, and storytelling, which
+            allows the studio to blend live-action with computer-generated
+            imagery seamlessly.
           </p>
           <p className="text-primary-foreground text-[15px] lg:text-[17px] font-light font-IBM leading-[24px] ">
-          The leadership is committed to more than just technical mastery; they hold a deep belief that every piece of art has its own consciousness, and this conviction guides the studio&apos;s approach to storytelling. This philosophy ensures that their creations maintain a sense of integrity and soul, resulting in films that resonate emotionally with audiences. Their focus is not merely on producing content, but on creating immersive cinematic experiences that re-ignite the spirit of storytelling. Through years of experience in visual effects, sound design, branding and business, the leadership team has built a solid foundation for the studio&apos;s mission. 
+            The leadership is committed to more than just technical mastery;
+            they hold a deep belief that every piece of art has its own
+            consciousness, and this conviction guides the studio&apos;s approach
+            to storytelling. This philosophy ensures that their creations
+            maintain a sense of integrity and soul, resulting in films that
+            resonate emotionally with audiences. Their focus is not merely on
+            producing content, but on creating immersive cinematic experiences
+            that re-ignite the spirit of storytelling. Through years of
+            experience in visual effects, sound design, branding and business,
+            the leadership team has built a solid foundation for the
+            studio&apos;s mission.
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 "use client";
+import { ArrowRightIcon } from "@/lib/constants";
 import { useRef, useState, useEffect } from "react";
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
   controls?: boolean;
 };
 
-export function VideoCard({ title, video, image, controls }: Props) {
+export function VideoWork({ title, video, image, controls }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -54,13 +55,13 @@ export function VideoCard({ title, video, image, controls }: Props) {
   return (
     <div className="w-full h-full overflow-hidden">
       {video ? (
-        <div className="relative w-full h-[253px] lg:h-[515px] ">
+        <div className="relative w-full h-[702px] lg:h-[810px] ">
           <video
             ref={videoRef}
             className="absolute top-0 left-0 w-full h-full object-cover"
             playsInline
             controls={controls ? controls : false}
-            autoPlay
+            autoPlay={false}
             loop
           >
             <source src={video} type="video/mp4" />
@@ -78,7 +79,7 @@ export function VideoCard({ title, video, image, controls }: Props) {
           )}
         </div>
       ) : (
-        <div className="relative w-full h-[253px] lg:h-[515px]">
+        <div className="relative w-full  h-[702px] lg:h-[810px]">
           <img
             src={image}
             className="absolute top-0 left-0 w-full h-full object-cover"
@@ -86,11 +87,6 @@ export function VideoCard({ title, video, image, controls }: Props) {
           />
         </div>
       )}
-      <div className="py-2">
-        <p className="text-primary-lightBlack text-sm lg:text-[28px] text-left font-normal font-IBM">
-          {title}
-        </p>
-      </div>
     </div>
   );
 }

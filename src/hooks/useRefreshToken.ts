@@ -7,8 +7,7 @@ import { useRouter } from "next/navigation";
 
 export const useRefreshToken = () => {
   const router = useRouter();
-  const handleRefreshToken = async () => {
-  };
+  const handleRefreshToken = async () => {};
 
   return handleRefreshToken;
 };

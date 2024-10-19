@@ -23,11 +23,7 @@ export default function TeamCard({ name, role, image }: Props) {
       {isLoading ? (
         <Skeleton className="w-full lg:w-[454px] h-[500px] lg:h-[590px] rounded-lg" />
       ) : (
-        <img
-          src={image}
-          className="w-[454px]  rounded-lg"
-          alt="Team Member"
-        />
+        <img src={image} className="w-[454px]  rounded-lg" alt="Team Member" />
       )}
       <div className="pt-3">
         <p className="text-[21.75px] text-primary-teamTitle font-normal font-IBM leading-[25px] uppercase">
