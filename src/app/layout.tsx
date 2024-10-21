@@ -29,7 +29,7 @@ export default function RootLayout({
         // enableSystem
         // disableTransitionOnChange
         >
-          <div className="relative z-50">
+          <div className="fixed z-50 w-full">
             <Navbar />
           </div>
           <Toaster />

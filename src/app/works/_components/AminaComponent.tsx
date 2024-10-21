@@ -50,7 +50,6 @@ export default function AminaComponent({}: Props) {
                   video={videos.aminaMontage}
                   controls={true}
                 />
-     
               </div>
             </div>
           </div>

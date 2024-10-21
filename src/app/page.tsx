@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Loader from "@/components/global/Loader";
+import Navbar from "@/components/global/Navbar";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);

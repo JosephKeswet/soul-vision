@@ -17,7 +17,11 @@ export default function HaskeComponent({}: Props) {
         </div> */}
         <div className="pt-8  px-4 lg:px-10">
           <p className="text-[20px]">
-          HASKE,&quot; conceived during the making of &quot;AMINA,&quot; feels like its spiritual predecessor. Both films faced similar challenges—lack of funding, equipment, and support. At its heart, &quot;HASKE&quot; is about perseverance, overcoming inner struggles, and finding strength to face external obstacles.
+            HASKE,&quot; conceived during the making of &quot;AMINA,&quot; feels
+            like its spiritual predecessor. Both films faced similar
+            challenges—lack of funding, equipment, and support. At its heart,
+            &quot;HASKE&quot; is about perseverance, overcoming inner struggles,
+            and finding strength to face external obstacles.
           </p>
           <div className="grid grid-cols-2 gap-8 pt-8">
             <div className="col-span-2">
@@ -48,7 +52,6 @@ export default function HaskeComponent({}: Props) {
                   video={videos.aminaMontage}
                   controls={true}
                 />
-     
               </div>
             </div>
           </div>
