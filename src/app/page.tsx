@@ -106,35 +106,7 @@ export default function Home() {
             alt="Arrow Down"
           />
         </div>
-        <div className="w-full py-8 lg:py-24 px-4 lg:pl-10">
-          <Carousel
-            opts={{ align: "start" }}
-            orientation="horizontal"
-            className="w-full h-auto lg:h-[615px]"
-          >
-            <CarouselContent className="flex flex-col lg:flex-row gap-6">
-              <CarouselItem className="w-full lg:w-[781px] basis-7/12">
-                <VideoCard title="Amina" video={videos.aminaMontage} />
-              </CarouselItem>
-              <CarouselItem className="w-full lg:w-[781px]  basis-7/12">
-                <VideoCard
-                  title="Haske - Light In The Dark"
-                  video={videos.haskeMontage}
-                />
-              </CarouselItem>
-              <CarouselItem className="w-full lg:w-[781px]  basis-7/12">
-                <VideoCard
-                  title="Pathos (Coming This Summer)"
-                  video=""
-                  image="/assets/Pathos.png"
-                />
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious className="hidden lg:flex absolute z-30 top-[100%] bottom-0 left-[40%] right-8 my-10" />
-
-            <CarouselNext className="hidden lg:flex lg:absolute z-30 top-[100%] bottom-0 right-[40%] my-10" />
-          </Carousel>
-        </div>
+   
         <div
           id="story"
           className="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 lg:gap-0 px-4 lg:px-10"
@@ -170,6 +142,35 @@ export default function Home() {
               creations.
             </p>
           </div>
+        </div>
+        <div className="w-full py-8 lg:py-24 px-4 lg:pl-10">
+          <Carousel
+            opts={{ align: "start" }}
+            orientation="horizontal"
+            className="w-full h-auto lg:h-[615px]"
+          >
+            <CarouselContent className="flex flex-col lg:flex-row gap-6">
+              <CarouselItem className="w-full lg:w-[781px] basis-7/12">
+                <VideoCard title="Amina" video={videos.aminaMontage} />
+              </CarouselItem>
+              <CarouselItem className="w-full lg:w-[781px]  basis-7/12">
+                <VideoCard
+                  title="Haske - Light In The Dark"
+                  video={videos.haskeMontage}
+                />
+              </CarouselItem>
+              <CarouselItem className="w-full lg:w-[781px]  basis-7/12">
+                <VideoCard
+                  title="Pathos (Coming This Summer)"
+                  video=""
+                  image="/assets/Pathos.png"
+                />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="hidden lg:flex absolute z-30 top-[100%] bottom-0 left-[40%] right-8 my-10" />
+
+            <CarouselNext className="hidden lg:flex lg:absolute z-30 top-[100%] bottom-0 right-[40%] my-10" />
+          </Carousel>
         </div>
         <div className="flex justify-end py-8 lg:py-24 px-4 lg:px-10">
           <ArrowRightIcon />

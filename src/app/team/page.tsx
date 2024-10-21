@@ -26,7 +26,7 @@ export default function page({}: Props) {
   }
   return (
     <div className="px-4 lg:px-10">
-      <div className="flex flex-col gap-16 pt-10 lg:pt-32">
+      <div className="flex flex-col gap-16 pt-24 lg:pt-32">
         <h1 className="text-primary-black text-[32px] lg:text-[76.56px] font-light font-IBM leading-[7px] lg:leading-[80px] lg:-tracking-[4.8px]">
           Leadership
         </h1>

@@ -20,7 +20,7 @@ export default function Navbar({}: Props) {
     setIsSheetOpen(false);
   }, [pathname]);
   return (
-    <div className={`bg-transparent `}>
+    <div className={`${pathname === routes.home ? "bg-black" : "bg-transparent"} `}>
       <div className="flex items-center justify-between w-full p-4 lg:p-10">
         {pathname === routes.home ? (
           <Link href={routes.home}>
@@ -97,26 +97,29 @@ export default function Navbar({}: Props) {
               </div>
             </SheetTrigger>
             <SheetContent className="bg-white pt-16">
-              <Link href="#" className=" flex items-center gap-6 h-[44.3px]">
+              <div    onClick={() => {
+                router.push(routes.home);
+                scrollToSection("story");
+              }} className=" flex items-center gap-6 h-[44.3px]">
                 <span className="text-xs font-IBM font-light">01</span>
                 <p className="font-IBM font-light text-[24.32px] text-primary">
                   Our Story
                 </p>
-              </Link>
-              <Link href="#" className=" flex items-center gap-6 h-[44.3px]">
+              </div>
+              <Link href={routes.team} className=" flex items-center gap-6 h-[44.3px]">
                 <span className="text-xs font-IBM font-light">02</span>
 
                 <p className="font-IBM font-light text-[24.32px] text-primary">
                   Team
                 </p>
               </Link>
-              <div className=" flex items-center gap-6 h-[44.3px]">
+              <Link href={routes.work} className=" flex items-center gap-6 h-[44.3px]">
                 <span className="text-xs font-IBM font-light">03</span>
 
                 <p className="font-IBM font-light text-[24.32px] text-primary">
                   Work
                 </p>
-              </div>
+              </Link>
             </SheetContent>
           </Sheet>
         </div>
