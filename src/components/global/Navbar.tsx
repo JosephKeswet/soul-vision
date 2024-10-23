@@ -86,7 +86,7 @@ export default function Navbar({}: Props) {
         <div className="flex md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger className="flex md:hidden">
-              {pathname.includes(routes.home) && <div>
+              {pathname === routes.home && <div>
                 <Image
                   src="/assets/hamburger-menu-white.svg"
                   width={68}
@@ -94,7 +94,7 @@ export default function Navbar({}: Props) {
                   alt="Menu"
                   priority
                 />
-              </div>} {pathname.includes(routes.team) && <div>
+              </div>} {pathname === routes.team && <div>
                 <Image
                   src="/assets/hamburger-menu.svg"
                   width={68}
@@ -103,7 +103,7 @@ export default function Navbar({}: Props) {
                   priority
                 />
               </div>}
-              {pathname.includes(routes.story) && <div>
+              {pathname === routes.story && <div>
                 <Image
                   src="/assets/hamburger-menu.svg"
                   width={68}
