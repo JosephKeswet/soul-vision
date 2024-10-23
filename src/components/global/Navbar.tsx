@@ -20,7 +20,7 @@ export default function Navbar({}: Props) {
     setIsSheetOpen(false);
   }, [pathname]);
   return (
-    <div className={`${pathname === routes.home ? "bg-black" : "bg-transparent"} `}>
+    <div className={`${pathname === routes.home ? "bg-transparent" : "bg-transparent"} `}>
       <div className="flex items-center justify-between w-full p-4 lg:p-10">
         {pathname === routes.home ? (
           <Link href={routes.home}>
@@ -89,7 +89,7 @@ export default function Navbar({}: Props) {
               {pathname.includes(routes.home) && <div>
                 <Image
                   src="/assets/hamburger-menu-white.svg"
-                  width={38}
+                  width={68}
                   height={42}
                   alt="Menu"
                   priority

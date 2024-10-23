@@ -63,18 +63,18 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="w-full h-[832px] bg-black overflow-hidden">
+      <div className="w-full h-[500px] lg:h-[832px] bg-black overflow-hidden">
         {isLoading && <Loader />}
         <video
           ref={videoRef}
-          className="absolute inset-0 object-cover w-full h-full"
+          className="absolute inset-0 object-center lg:object-cover w-full h-full"
           playsInline
           controls={false}
           autoPlay
           loop
           onLoadedMetadata={() => setIsLoading(false)}
         >
-          <source src={videos.mainMontage} type="video/mp4" />
+          <source src='/assets/Land.mp4' type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
