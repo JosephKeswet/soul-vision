@@ -12,7 +12,6 @@ export default function Page({}: Props) {
   function RightIcon({ title }: { title: string }) {
     return (
       <div
-      
         onClick={() => {
           router.push(`${routes.works}/${title.toLowerCase()}`);
         }}
@@ -24,8 +23,17 @@ export default function Page({}: Props) {
   }
   return (
     <div className="grid grid-cols-1 gap-2 lg:gap-6">
-      <div className="relative w-full">
-        <ImageWork title="Amina" image="/assets/Amina/vid1.png" controls={true} />
+      <div
+        className="relative w-full cursor-pointer"
+        onClick={() => {
+          router.push(`${routes.works}/amina`);
+        }}
+      >
+        <ImageWork
+          title="Amina"
+          image="/assets/Amina/vid1.png"
+          controls={true}
+        />
         <div className="absolute bottom-0 left-4 lg:bottom-20 lg:left-8 py-2 z-50">
           <p className="text-white text-lg lg:text-[54px] text-left font-normal font-IBM uppercase">
             AMINA
@@ -37,8 +45,17 @@ export default function Page({}: Props) {
           </p>
         </div>
       </div>
-      <div className="relative w-full ">
-        <ImageWork title="HASKE" image="/assets/Haske/vid1.png" controls={true} />
+      <div
+        className="relative w-full cursor-pointer"
+        onClick={() => {
+          router.push(`${routes.works}/haske`);
+        }}
+      >
+        <ImageWork
+          title="HASKE"
+          image="/assets/Haske/vid1.png"
+          controls={true}
+        />
         <div className="absolute bottom-0 left-4 lg:bottom-20 lg:left-8 py-2">
           <p className="text-white text-lg lg:text-[54px] text-left font-normal font-IBM uppercase">
             HASKE

@@ -19,7 +19,7 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter()
+  const router = useRouter();
   const handlePlay = () => {
     if (videoRef.current) {
       videoRef.current.play();
@@ -74,7 +74,7 @@ export default function Home() {
           loop
           onLoadedMetadata={() => setIsLoading(false)}
         >
-          <source src='/assets/Land.mp4' type="video/mp4" />
+          <source src="/assets/Land.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -108,7 +108,7 @@ export default function Home() {
             alt="Arrow Down"
           />
         </div>
-   
+
         <div
           id="story"
           className="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 lg:gap-0 px-4 lg:px-10"
@@ -172,9 +172,12 @@ export default function Home() {
             {/* <CarouselPrevious className="hidden lg:flex absolute z-30 top-[100%] bottom-0 left-[40%] right-8 my-10" /> */}
 
             {/* <CarouselNext className="hidden lg:flex lg:absolute z-30 top-[100%] bottom-0 right-5 " /> */}
-        <div onClick={() => router.push(routes.work)} className="flex justify-end pb-8 pt-8 lg:pt-10 lg:pb-24 px-4 lg:px-10 cursor-pointer">
-          <ArrowRightIcon />
-        </div>
+            <div
+              onClick={() => router.push(routes.work)}
+              className="flex justify-end pb-8 pt-8 lg:pt-10 lg:pb-24 px-4 lg:px-10 cursor-pointer"
+            >
+              <ArrowRightIcon />
+            </div>
           </Carousel>
         </div>
       </section>

@@ -40,7 +40,7 @@ export function ImageWork({ title, video, image, controls }: Props) {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (videoRef.current) {
@@ -58,7 +58,7 @@ export function ImageWork({ title, video, image, controls }: Props) {
     if (image) {
       const img = new Image();
       img.src = image;
-      img.onload = () => setIsLoading(false);  // Stop loading when image is fully loaded
+      img.onload = () => setIsLoading(false); // Stop loading when image is fully loaded
     }
   }, [image]);
 

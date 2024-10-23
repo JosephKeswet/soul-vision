@@ -9,7 +9,11 @@ export default function HaskeComponent({}: Props) {
   return (
     <div className="pb-[100px] lg:pb-[200px] ">
       <div className="relative w-full ">
-      <ImageWork title="Haske" image="/assets/Haske/vid1.png" controls={true} />
+        <ImageWork
+          title="Haske"
+          image="/assets/Haske/vid1.png"
+          controls={true}
+        />
 
         {/* <div className="absolute bottom-20 left-8 py-2">
           <p className="text-white text-lg lg:text-[54px] text-left font-normal font-IBM uppercase">
@@ -17,7 +21,7 @@ export default function HaskeComponent({}: Props) {
           </p>
         </div> */}
         <div className="pt-8  px-4 lg:px-10">
-        <p className="text-[17px] md:text-[20px]  font-IBM font-light">
+          <p className="text-[17px] md:text-[20px]  font-IBM font-light">
             HASKE,&quot; conceived during the making of &quot;AMINA,&quot; feels
             like its spiritual predecessor. Both films faced similar
             challenges—lack of funding, equipment, and support. At its heart,

@@ -34,9 +34,8 @@ export default function RootLayout({
           </div>
           <Toaster />
           <div className="h-screen">
-
-          {children}
-          <Footer />
+            {children}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

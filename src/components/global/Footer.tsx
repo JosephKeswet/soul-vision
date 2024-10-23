@@ -74,7 +74,7 @@ export default function Footer({}: Props) {
             </li>
           </ul>
         </div>
-      
+
         <div className="flex flex-col gap-1 lg:gap-2">
           <p className="text-sm md:text-lg text-white font-normal font-IBM">
             Join Us

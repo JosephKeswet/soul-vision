@@ -47,9 +47,10 @@ export default function Navbar({}: Props) {
   }, []);
 
   return (
-    <div className={`${pathname === routes.home ? "bg-transparent" : "bg-transparent"} `}>
+    <div
+      className={`${pathname === routes.home ? "bg-transparent" : "bg-transparent"} `}
+    >
       <div className="flex items-center justify-between w-full p-4 lg:p-10">
-        
         {/* Logo switch based on scroll and page */}
         <Link href={routes.home}>
           <img
@@ -57,8 +58,8 @@ export default function Navbar({}: Props) {
               pathname === routes.team // Always normal logo on Team page
                 ? "/assets/Logo.png"
                 : isScrolled && !isNearBottom
-                ? "/assets/Logo.png" // Regular logo when scrolled
-                : "/assets/LogoWhite.png" // White logo at top or near bottom
+                  ? "/assets/Logo.png" // Regular logo when scrolled
+                  : "/assets/LogoWhite.png" // White logo at top or near bottom
             }
             className="w-[72px] lg:w-[102px]"
             alt="Logo"
@@ -71,10 +72,10 @@ export default function Navbar({}: Props) {
             pathname === routes.work
               ? "text-white" // Always white on the Work page
               : pathname === routes.team
-              ? "text-black" // Always black on the Team page
-              : isScrolled && !isNearBottom
-              ? "text-black" // Black text when scrolled (not at bottom)
-              : "text-white" // White text when at top or near bottom
+                ? "text-black" // Always black on the Team page
+                : isScrolled && !isNearBottom
+                  ? "text-black" // Black text when scrolled (not at bottom)
+                  : "text-white" // White text when at top or near bottom
           }`}
         >
           <li
@@ -157,13 +158,19 @@ export default function Navbar({}: Props) {
                   Our Story
                 </p>
               </div>
-              <Link href={routes.team} className="flex items-center gap-6 h-[44.3px]">
+              <Link
+                href={routes.team}
+                className="flex items-center gap-6 h-[44.3px]"
+              >
                 <p className="font-IBM font-light text-[24.32px] text-primary">
                   <span className="text-xs font-IBM font-light mr-5">02</span>
                   Team
                 </p>
               </Link>
-              <Link href={routes.work} className="flex items-center gap-6 h-[44.3px]">
+              <Link
+                href={routes.work}
+                className="flex items-center gap-6 h-[44.3px]"
+              >
                 <p className="font-IBM font-light text-[24.32px] text-primary">
                   <span className="text-xs font-IBM font-light mr-5">03</span>
                   Work

@@ -12,7 +12,7 @@ type Props = {
 export function VideoCard({ title, video, image, controls }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);  // State to track image loading
+  const [isLoading, setIsLoading] = useState(true); // State to track image loading
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -39,7 +39,7 @@ export function VideoCard({ title, video, image, controls }: Props) {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (videoRef.current) {
@@ -57,7 +57,7 @@ export function VideoCard({ title, video, image, controls }: Props) {
     if (image) {
       const img = new Image();
       img.src = image;
-      img.onload = () => setIsLoading(false);  // Update loading state once image is loaded
+      img.onload = () => setIsLoading(false); // Update loading state once image is loaded
     }
   }, [image]);
 
