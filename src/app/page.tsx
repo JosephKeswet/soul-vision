@@ -67,7 +67,7 @@ export default function Home() {
         {isLoading && <Loader />}
         <video
           ref={videoRef}
-          className="absolute inset-0 object-center lg:object-cover w-full h-full"
+          className="absolute inset-0 object-cover w-full h-full"
           playsInline
           controls={false}
           autoPlay
