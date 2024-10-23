@@ -71,7 +71,7 @@ export default function Home() {
           playsInline
           controls={false}
           autoPlay
-          loop
+          loop={true}
           onLoadedMetadata={() => setIsLoading(false)}
         >
           <source src='/assets/Land.mp4' type="video/mp4" />
