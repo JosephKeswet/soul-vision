@@ -66,7 +66,7 @@ export default function TeamCard({ name, role, image, bio }: Props) {
       </div>
       {/* Button to toggle between image and bio */}
       <button
-        className="flex items-center text-black text-sm mt-2"
+        className={`flex items-center text-black text-sm ${showBio ? "mt-4" : "mt-2"}`}
         onClick={() => setShowBio(!showBio)}
       >
         {showBio ? "HIDE BIO" : "FULL BIO "}

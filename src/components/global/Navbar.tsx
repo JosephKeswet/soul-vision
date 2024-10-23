@@ -25,16 +25,16 @@ export default function Navbar({}: Props) {
         {pathname === routes.home ? (
           <Link href={routes.home}>
             <img
-              src="/assets/Logo.png"
-              className="w-[72px] lg:w-[102px] h-[27px]"
+              src="/assets/LogoWhite.png"
+              className="w-[72px] lg:w-[102px]"
               alt="Logo"
             />
           </Link>
         ) : (
           <Link href={routes.home}>
             <img
-              src="/assets/LogoPurple.png"
-              className="w-[72px] lg:w-[102px] h-[27px]"
+              src="/assets/Logo.png"
+              className="w-[72px] lg:w-[102px] "
               alt="Logo"
             />
           </Link>
@@ -86,7 +86,15 @@ export default function Navbar({}: Props) {
         <div className="flex md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger className="flex md:hidden">
-              <div>
+              {pathname.includes(routes.home) && <div>
+                <Image
+                  src="/assets/hamburger-menu-white.svg"
+                  width={38}
+                  height={42}
+                  alt="Menu"
+                  priority
+                />
+              </div>} {pathname.includes(routes.team) && <div>
                 <Image
                   src="/assets/hamburger-menu.svg"
                   width={68}
@@ -94,29 +102,40 @@ export default function Navbar({}: Props) {
                   alt="Menu"
                   priority
                 />
-              </div>
+              </div>}
+              {pathname.includes(routes.story) && <div>
+                <Image
+                  src="/assets/hamburger-menu.svg"
+                  width={68}
+                  height={42}
+                  alt="Menu"
+                  priority
+                />
+              </div>}
+
             </SheetTrigger>
             <SheetContent className="bg-white pt-16">
               <div    onClick={() => {
                 router.push(routes.home);
                 scrollToSection("story");
-              }} className=" flex items-center gap-6 h-[44.3px]">
-                <span className="text-xs font-IBM font-light">01</span>
+              }} className=" flex items-end gap-6 h-[44.3px]">
                 <p className="font-IBM font-light text-[24.32px] text-primary">
+                <span className="text-xs font-IBM font-light mr-5">01</span>
+
                   Our Story
                 </p>
               </div>
               <Link href={routes.team} className=" flex items-center gap-6 h-[44.3px]">
-                <span className="text-xs font-IBM font-light">02</span>
 
                 <p className="font-IBM font-light text-[24.32px] text-primary">
+                <span className="text-xs font-IBM font-light mr-5">02</span>
+
                   Team
                 </p>
               </Link>
               <Link href={routes.work} className=" flex items-center gap-6 h-[44.3px]">
-                <span className="text-xs font-IBM font-light">03</span>
-
                 <p className="font-IBM font-light text-[24.32px] text-primary">
+                <span className="text-xs font-IBM font-light mr-5">03</span>
                   Work
                 </p>
               </Link>

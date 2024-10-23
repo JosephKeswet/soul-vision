@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
+import { Skeleton } from "../ui/skeleton"; // Assuming you have a Skeleton component
 
 type Props = {
   title: string;
@@ -11,6 +12,7 @@ type Props = {
 export function VideoCard({ title, video, image, controls }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);  // State to track image loading
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -37,7 +39,7 @@ export function VideoCard({ title, video, image, controls }: Props) {
           }
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 }
     );
 
     if (videoRef.current) {
@@ -51,10 +53,18 @@ export function VideoCard({ title, video, image, controls }: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    if (image) {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => setIsLoading(false);  // Update loading state once image is loaded
+    }
+  }, [image]);
+
   return (
-    <div className="w-full h-full overflow-hidden">
+    <div className="w-full h-full ">
       {video ? (
-        <div className="relative w-full h-[253px] lg:h-[515px] ">
+        <div className="relative w-full h-[253px] lg:h-[515px]">
           <video
             ref={videoRef}
             className="absolute top-0 left-0 w-full h-full object-cover"
@@ -79,14 +89,18 @@ export function VideoCard({ title, video, image, controls }: Props) {
         </div>
       ) : (
         <div className="relative w-full h-[253px] lg:h-[515px]">
-          <img
-            src={image}
-            className="absolute top-0 left-0 w-full h-full object-cover"
-            alt={title}
-          />
+          {isLoading ? (
+            <Skeleton className="w-full h-full rounded-lg" />
+          ) : (
+            <img
+              src={image}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              alt={title}
+            />
+          )}
         </div>
       )}
-      <div className="py-2">
+      <div className="py-4 lg:py-6">
         <p className="text-primary-lightBlack text-sm lg:text-[28px] text-left font-normal font-IBM">
           {title}
         </p>

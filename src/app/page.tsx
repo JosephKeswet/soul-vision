@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import { ArrowRightIcon, fonts, videos } from "@/lib/constants";
+import { ArrowRightIcon, fonts, routes, videos } from "@/lib/constants";
 import { VideoCard } from "@/components/global/VideoCard";
 import {
   Carousel,
@@ -12,12 +12,14 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Loader from "@/components/global/Loader";
 import Navbar from "@/components/global/Navbar";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
+  const router = useRouter()
   const handlePlay = () => {
     if (videoRef.current) {
       videoRef.current.play();
@@ -112,19 +114,19 @@ export default function Home() {
           className="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 lg:gap-0 px-4 lg:px-10"
         >
           <div className="col-span-1">
-            <h1 className="text-[32px] lg:text-[62px] text-black font-normal font-IBM">
+            <h1 className="text-[32px] lg:text-[62px] text-black font-light font-IBM">
               Our Story
             </h1>
           </div>
           <div className="col-span-1 flex flex-col gap-8">
-            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-extralight font-IBM">
               Soul Vision Studio is an animation film company dedicated to
               preserving the essence of art and cinema. We aim to bridge the gap
               between live-action and computer-generated imagery while
               developing new technologies to enhance storytelling, creating a
               truly immersive cinematic experience.
             </p>
-            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-extralight font-IBM">
               Founded in 2022, our studio has been focused on establishing an
               effective production pipeline that enables us to develop our
               intellectual properties and achieve our goals. Since our
@@ -132,7 +134,7 @@ export default function Home() {
               garnered significant attention organically, proving the viability
               of our endeavour.
             </p>
-            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-normal font-IBM">
+            <p className="text-[15px] lg:text-[17px] text-primary-lightBlack font-extralight font-IBM">
               Our mission is to restore the spark that cinema once had and
               illuminate a new way of storytelling. At its core, Soul Vision
               Studio possesses its own consciousness. We believe that every
@@ -167,13 +169,13 @@ export default function Home() {
                 />
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious className="hidden lg:flex absolute z-30 top-[100%] bottom-0 left-[40%] right-8 my-10" />
+            {/* <CarouselPrevious className="hidden lg:flex absolute z-30 top-[100%] bottom-0 left-[40%] right-8 my-10" /> */}
 
-            <CarouselNext className="hidden lg:flex lg:absolute z-30 top-[100%] bottom-0 right-[40%] my-10" />
-          </Carousel>
-        </div>
-        <div className="flex justify-end py-8 lg:py-24 px-4 lg:px-10">
+            {/* <CarouselNext className="hidden lg:flex lg:absolute z-30 top-[100%] bottom-0 right-5 " /> */}
+        <div onClick={() => router.push(routes.work)} className="flex justify-end pb-8 pt-8 lg:pt-10 lg:pb-24 px-4 lg:px-10 cursor-pointer">
           <ArrowRightIcon />
+        </div>
+          </Carousel>
         </div>
       </section>
     </main>

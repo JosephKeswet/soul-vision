@@ -1,6 +1,7 @@
 "use client";
 import { ArrowRightIcon } from "@/lib/constants";
 import { useRef, useState, useEffect } from "react";
+import { Skeleton } from "../ui/skeleton";
 
 type Props = {
   title: string;
@@ -9,9 +10,10 @@ type Props = {
   controls?: boolean;
 };
 
-export function VideoWork({ title, video, image, controls }: Props) {
+export function ImageWork({ title, video, image, controls }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -38,7 +40,7 @@ export function VideoWork({ title, video, image, controls }: Props) {
           }
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 }
     );
 
     if (videoRef.current) {
@@ -52,10 +54,30 @@ export function VideoWork({ title, video, image, controls }: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    if (image) {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => setIsLoading(false);  // Stop loading when image is fully loaded
+    }
+  }, [image]);
+
   return (
     <div className="w-full h-full overflow-hidden">
+      {isLoading ? (
+        <Skeleton className="w-full h-[500px] lg:h-[605px] rounded-lg" />
+      ) : (
+        <div className="relative w-full h-[252px] lg:h-[810px]">
+          <img
+            src={image}
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            alt={title}
+          />
+        </div>
+      )}
+
       {video ? (
-        <div className="relative w-full h-[702px] lg:h-[810px] ">
+        <div className="relative w-full h-[702px] lg:h-[810px]">
           <video
             ref={videoRef}
             className="absolute top-0 left-0 w-full h-full object-cover"
@@ -78,15 +100,7 @@ export function VideoWork({ title, video, image, controls }: Props) {
             </div>
           )}
         </div>
-      ) : (
-        <div className="relative w-full  h-[702px] lg:h-[810px]">
-          <img
-            src={image}
-            className="absolute top-0 left-0 w-full h-full object-cover"
-            alt={title}
-          />
-        </div>
-      )}
+      ) : null}
     </div>
   );
 }

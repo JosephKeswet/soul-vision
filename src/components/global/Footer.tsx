@@ -4,7 +4,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <footer className="grid grid-cols-2 w-full p-4 lg:p-10 border bg-[#3C3490]">
+    <footer className="grid grid-cols-2 w-full p-4 lg:p-10 border bg-[#3C3490] ">
       <div className="col-span-1 flex flex-col gap-10">
         <div className="flex flex-col gap-1 lg:gap-2">
           <p className="text-sm md:text-lg text-white font-normal font-IBM">
@@ -52,6 +52,16 @@ export default function Footer({}: Props) {
             <li className=" underline underline-offset-4">Cookies</li>
           </ul>
         </div>
+        <div className="flex flex-col gap-1 lg:gap-2">
+          <p className="text-sm md:text-lg text-white font-normal font-IBM">
+            Talk to Us
+          </p>
+          <ul className="flex flex-col gap-1 lg:gap-2 text-sm md:text-base text-white font-IBM font-light">
+            <li className=" underline underline-offset-4">
+              +234 (0) 90 5706 8297
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="col-span-1 flex flex-col gap-10">
         <div className="flex flex-col gap-1 lg:gap-2">
@@ -64,16 +74,7 @@ export default function Footer({}: Props) {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col gap-1 lg:gap-2">
-          <p className="text-sm md:text-lg text-white font-normal font-IBM">
-            Talk to Us
-          </p>
-          <ul className="flex flex-col gap-1 lg:gap-2 text-sm md:text-base text-white font-IBM font-light">
-            <li className=" underline underline-offset-4">
-              +234 (0) 90 5706 8297
-            </li>
-          </ul>
-        </div>
+      
         <div className="flex flex-col gap-1 lg:gap-2">
           <p className="text-sm md:text-lg text-white font-normal font-IBM">
             Join Us
