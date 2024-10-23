@@ -90,7 +90,7 @@ export default function Home() {
         )} */}
       </div>
       <section>
-        <div className="pt-8 lg:pt-24 px-4 lg:px-10">
+        <div className="pt-52 lg:pt-64 px-4 lg:px-10">
           <h1
             className={`text-primary-blue text-[22.1px] lg:text-[60px] font-light font-IBM leading-[35.33px] lg:leading-[68px]`}
           >

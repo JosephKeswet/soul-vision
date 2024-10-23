@@ -50,11 +50,13 @@ export default function Navbar({}: Props) {
     <div className={`${pathname === routes.home ? "bg-transparent" : "bg-transparent"} `}>
       <div className="flex items-center justify-between w-full p-4 lg:p-10">
         
-        {/* Logo switch based on scroll position */}
+        {/* Logo switch based on scroll and page */}
         <Link href={routes.home}>
           <img
             src={
-              isScrolled && !isNearBottom
+              pathname === routes.team // Always normal logo on Team page
+                ? "/assets/Logo.png"
+                : isScrolled && !isNearBottom
                 ? "/assets/Logo.png" // Regular logo when scrolled
                 : "/assets/LogoWhite.png" // White logo at top or near bottom
             }
@@ -66,9 +68,13 @@ export default function Navbar({}: Props) {
         {/* Main navigation menu */}
         <ul
           className={`hidden md:flex items-center text-base font-light font-IBM ${
-            isScrolled && !isNearBottom
-              ? "text-black"
-              : "text-white"
+            pathname === routes.work
+              ? "text-white" // Always white on the Work page
+              : pathname === routes.team
+              ? "text-black" // Always black on the Team page
+              : isScrolled && !isNearBottom
+              ? "text-black" // Black text when scrolled (not at bottom)
+              : "text-white" // White text when at top or near bottom
           }`}
         >
           <li
@@ -111,7 +117,16 @@ export default function Navbar({}: Props) {
         <div className="flex md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger className="flex md:hidden">
-              {isScrolled && !isNearBottom ? (
+              {/* Hamburger menu logic */}
+              {pathname === routes.team ? (
+                <Image
+                  src="/assets/hamburger-menu.svg" // Always show normal hamburger menu on Team page
+                  width={68}
+                  height={42}
+                  alt="Menu"
+                  priority
+                />
+              ) : isScrolled && !isNearBottom ? (
                 <Image
                   src="/assets/hamburger-menu.svg"
                   width={68}
