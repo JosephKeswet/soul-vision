@@ -96,7 +96,7 @@ Before joining “Soul Vision Studio”, Doyin managed various projects across d
         />
         <TeamCard
           name="PRAISE AMEH"
-          role="CREATIVE DIRECTOR - BRAND & DIGITAL EXPERIENCE"
+          role="CREATIVE DIRECTION - BRAND & DIGITAL EXPERIENCE"
           image={members.member4}
           bio={
             <BioItem

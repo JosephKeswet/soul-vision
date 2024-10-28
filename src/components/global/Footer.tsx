@@ -1,10 +1,11 @@
+import { YoutubeIcon } from "lucide-react";
 import React from "react";
 
 type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <footer className="grid grid-cols-2 w-full p-4 lg:p-10 border bg-[#3C3490] ">
+    <footer className="grid grid-cols-2 w-full p-4 lg:p-10  bg-[#3C3490] ">
       <div className="col-span-1 flex flex-col gap-10">
         <div className="flex flex-col gap-1 lg:gap-2">
           <p className="text-sm md:text-lg text-white font-normal font-IBM">
@@ -31,11 +32,12 @@ export default function Footer({}: Props) {
               className="w-[22px] h-[22px]"
               alt="LinkedIn icon"
             />
-            <img
+            {/* <img
               src="/assets/FacebookIcon.svg"
               className="w-[22px] h-[22px]"
               alt="Facebook icon"
-            />
+            /> */}
+            <YoutubeIcon className="text-white w-[22px] h-[22px]" />
             <img
               src="/assets/TwitterIcon.svg"
               className="w-[22px] h-[22px]"

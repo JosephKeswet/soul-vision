@@ -63,11 +63,11 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="w-full h-[500px] lg:h-[832px] bg-black overflow-hidden">
+      <div className="w-full h-[400px] lg:h-[832px] bg-black overflow-hidden">
         {isLoading && <Loader />}
         <video
           ref={videoRef}
-          className="absolute inset-0 object-cover w-full h-full"
+          className="absolute inset-0 h-[400px] lg:h-[832px] object-center bg-black"
           playsInline
           controls={false}
           autoPlay
@@ -77,20 +77,9 @@ export default function Home() {
           <source src="/assets/Land.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        {/* {!isPlaying && (
-          <div className="absolute inset-0 flex items-center justify-center z-20">
-            <img
-              onClick={handlePlay}
-              src="/assets/PlayIcon.png"
-              className="w-[100px] h-[100px] cursor-pointer"
-              alt="Play"
-            />
-          </div>
-        )} */}
       </div>
       <section>
-        <div className="pt-52 lg:pt-64 px-4 lg:px-10">
+        <div className="pt-8 lg:pt-64 px-4 lg:px-10">
           <h1
             className={`text-primary-blue text-[22.1px] lg:text-[60px] font-light font-IBM leading-[35.33px] lg:leading-[68px]`}
           >
