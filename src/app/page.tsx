@@ -63,21 +63,22 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="w-full h-[400px] lg:h-[832px] bg-black overflow-hidden">
-        {isLoading && <Loader />}
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-[400px] lg:h-[832px] object-center bg-black"
-          playsInline
-          controls={false}
-          autoPlay
-          loop
-          onLoadedMetadata={() => setIsLoading(false)}
-        >
-          <source src="/assets/Land.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <div className="w-full h-[50vh] lg:h-[832px] bg-black overflow-hidden">
+  {isLoading && <Loader />}
+  <video
+    ref={videoRef}
+    className="w-full h-full object-cover bg-black"
+    playsInline
+    controls={false}
+    autoPlay
+    loop
+    onLoadedMetadata={() => setIsLoading(false)}
+  >
+    <source src="/assets/Land.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
       <section>
         <div className="pt-8 lg:pt-64 px-4 lg:px-10">
           <h1
